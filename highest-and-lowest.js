@@ -3,3 +3,10 @@ function highAndLow(numbers){
     console.log(arr)
     return `${arr[arr.length-1]} ${arr[0]}`
   }
+
+  // better
+  
+  function highAndLow(numbers){
+    numbers = numbers.split(" ");
+      return `${Math.max(...numbers)} ${Math.min(...numbers)}`
+    }
