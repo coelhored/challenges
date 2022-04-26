@@ -11,3 +11,11 @@ function isPangram(string){
     console.log(letterUsedCount)
    return letterUsedCount == 26 ? true : false ;
   }
+
+
+//   better solution
+function isPangram(string){
+    return 'abcdefghijklmnopqrstuvwxyz'
+      .split('')
+      .every((x) => string.toLowerCase().includes(x));
+  }
