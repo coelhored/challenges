@@ -4,7 +4,7 @@
 
 
 function count (string) {  
-    result = {}
+    const result = {}
     const letters = string.split('')  //   split into array
     
     letters.forEach(letter => {  //   iterate over array, if item is not alreay a key, add it as a key and set value to 1
@@ -16,3 +16,13 @@ function count (string) {
     })
   return result  //   return the object
   }
+
+//  better
+
+// function count (string) {  
+//   const count = {};
+//   string.split('').forEach(s => {
+//      count[s] ? count[s]++ : count[s] = 1;
+//   });
+//   return count;
+// }
