@@ -1,4 +1,3 @@
-
 function listSquared(m, n) {
     console.log(m,n)
     //create the result array
