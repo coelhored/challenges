@@ -13,8 +13,14 @@ var maximumWealth = function(accounts) {
            if (wealth > biggestWealth) {biggestWealth = wealth}
        } */
    
-       let sums  = accounts.map (x => {
+     /*   let sums  = accounts.map (x => {
            return x.reduce((a,b) => a+b)
        })
-       return Math.max(...sums)
+       return Math.max(...sums) */
+   
+       let biggestWealth = 0
+       for (let i = 0; i < accounts.length; i++) {
+            biggestWealth = Math.max(biggestWealth, accounts[i].reduce((a,b )=> a + b, 0))
+       }
+       return biggestWealth
    };
